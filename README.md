@@ -93,6 +93,7 @@ Este projeto é de código aberto e está disponível para fins educacionais e d
 ---
 
 ## 👨‍💻 Desenvolvedor
+By: Diogo Caldas
 
 Criado com ❤️ e consciência ambiental.
 
