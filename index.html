@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Calcule as emissões de CO₂ das suas viagens e contribua para um planeta mais sustentável"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Calculadora de Emissão de CO₂</title>
+  </head>
+  <body>
+    <header>
+      <h1>Calculadora de Emissão de CO₂</h1>
+      <p>
+        Calcule as emissões de CO₂ das suas viagens e contribua para um planeta
+        mais sustentável
+      </p>
+    </header>
+
+    <main>
+      <form id="co2-calculator">
+        <fieldset>
+          <legend>Dados da Viagem</legend>
+
+          <div>
+            <label for="origin">Origem</label>
+            <input
+              type="text"
+              id="origin"
+              name="origin"
+              placeholder="Digite a cidade de origem"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="destination">Destino</label>
+            <input
+              type="text"
+              id="destination"
+              name="destination"
+              placeholder="Digite a cidade de destino"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="distance">Distância (km)</label>
+            <input
+              type="number"
+              id="distance"
+              name="distance"
+              value="0"
+              min="0"
+              step="0.1"
+              readonly
+            />
+            <p>A distância será preenchida automaticamente</p>
+            <button type="button" id="insert-distance-btn">
+              Inserir distância
+            </button>
+          </div>
+
+          <div>
+            <label>Meio de Transporte</label>
+            <div class="transport-cards">
+              <input
+                type="radio"
+                id="bicycle"
+                name="transport-mode"
+                value="bicycle"
+                required
+              />
+              <label for="bicycle" class="transport-card" data-emoji="🚴">
+                <span class="transport-icon">🚴</span>
+                <span class="transport-name">Bicicleta</span>
+              </label>
+
+              <input
+                type="radio"
+                id="car"
+                name="transport-mode"
+                value="car"
+                required
+              />
+              <label for="car" class="transport-card" data-emoji="🚗">
+                <span class="transport-icon">🚗</span>
+                <span class="transport-name">Carro</span>
+              </label>
+
+              <input
+                type="radio"
+                id="bus"
+                name="transport-mode"
+                value="bus"
+                required
+              />
+              <label for="bus" class="transport-card" data-emoji="🚌">
+                <span class="transport-icon">🚌</span>
+                <span class="transport-name">Ônibus</span>
+              </label>
+
+              <input
+                type="radio"
+                id="truck"
+                name="transport-mode"
+                value="truck"
+                required
+              />
+              <label for="truck" class="transport-card" data-emoji="🚚">
+                <span class="transport-icon">🚚</span>
+                <span class="transport-name">Caminhão</span>
+              </label>
+            </div>
+          </div>
+        </fieldset>
+
+        <button type="submit" id="calculate-btn">Calcular Emissão</button>
+      </form>
+
+      <section
+        id="results"
+        aria-live="polite"
+        aria-label="Resultado do cálculo"
+      >
+        <!-- Results will be displayed here -->
+      </section>
+    </main>
+
+    <footer>
+      <p>Desenvolvido com ❤️ para a DIO | Projeto GitHub Copilot do Pablo</p>
+    </footer>
+
+    <script src="js/routes-data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
